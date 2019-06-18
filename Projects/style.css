@@ -1,0 +1,16 @@
+h1 {
+    font-family: chalkduster;
+    color: #bababa
+}
+img {
+    border: 5px double;
+}
+body {
+    background-color: gray;
+}
+div {
+    font-size: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 10px;
+  }
