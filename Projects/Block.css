@@ -1,0 +1,37 @@
+.container {
+    width: 300px;
+     display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .grid {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%
+  }
+  #red {
+    background-color: red;
+  }
+  #yellow  {
+    background-color: yellow;
+  }
+  #green {
+    background-color: green;
+  }
+  #blue {
+    background-color: blue;
+  }
+  #purple {
+    background-color: purple;
+  }
+  #teal {
+    background-color: #03FFFB;
+  }
+  #pinkish {
+    background-color: #ffa1e1;
+  }
+  #blueish {
+    background-color: #B4A8FF;
+  }
+  #gray {
+    background-color: gray;
+  }
