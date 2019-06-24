@@ -1,0 +1,9 @@
+h1 {
+    font-family: Comic Sans MS
+}
+button {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    font-size: 20px
+}
