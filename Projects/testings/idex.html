@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing?</title>
+    <link href="style.css" />
+</head>
+
+<body>
+    <FORM NAME="WordForm">
+        <INPUT TYPE=TEXT NAME="WordBox" id="wordbox"><BR>
+        <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+        <INPUT TYPE=TEXT NAME="WordBoxB" id="wordbox"><BR>
+        <INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomColor(document.WordForm);" id="button">
+    </FORM>
+    <button id="next">CONTINUE</button>
+    <script type="text/javascript">
+
+        //words
+
+        var NumberOfWords = 10
+
+        var words = new BuildArray(NumberOfWords)
+
+        //words definition 1~10
+        words[1] = "brown"
+        words[2] = "pink"
+        words[3] = "orange"
+        words[4] = "blue"
+        words[5] = "white"
+        words[6] = "black"
+        words[7] = "yellow"
+        words[8] = "green"
+        words[9] = "red"
+        words[10] = "plurple"
+
+        function BuildArray(size) {
+            this.length = size
+            for (var i = 1; i <= size; i++) {
+                this[i] = null
+            }
+            return this
+        }
+
+        function PickRandomWord(frm) {
+            // Generate a random number between 1 and NumberOfWords
+            var rnd = Math.ceil(Math.random() * NumberOfWords)
+
+            // Display the word inside the text box
+            frm.WordBox.value = words[rnd]
+        }
+
+        //color
+
+        var NumberOfColor = 10
+
+        var color = new BuildArrai(NumberOfColor)
+
+        //color definition 1~10
+
+        color[1] = "brown"
+        color[2] = "pink"
+        color[3] = "orange"
+        color[4] = "blue"
+        color[5] = "white"
+        color[6] = "black"
+        color[7] = "yellow"
+        color[8] = "green"
+        color[9] = "red"
+        color[10] = "plurple"
+
+        function BuildArrai(size) {
+            this.length = size
+            for (var a = 1; a <= size; a++) {
+                this[a] = null
+            }
+            return this
+        }
+
+        function PickRandomColor(frm) {
+            // Generate a random number between 1 and NumberOfColor
+            var rnd = Math.ceil(Math.random() * NumberOfColor)
+
+            // Display the word inside the text box
+            frm.WordBoxB.value = color[rnd]
+        }
+
+        //check if right
+
+        Document.querySelector("#next").onclick = function () {
+            if (color == words) {
+                window.location.href = "http://127.0.0.1:5500/testings/done.html";
+            } else {
+                window.location.href = "http://127.0.0.1:5500/testings/index.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
